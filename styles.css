@@ -5,9 +5,9 @@
 }
 
 body {
-  background-image: linear-gradient(120deg, #f6d365, #fda085);
+  background-image: linear-gradient(120deg, #062e9e, #00b3b9);
   color: rgb(255, 255, 255);
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   min-height: 100vh;
 }
 
@@ -32,14 +32,14 @@ form button {
 }
 
 form button {
-  color: #d88771;
+  color: #00b3b9;
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 form button:hover {
-  background: #d88771;
+  background: #00b3b9;
   color: white;
 }
 
@@ -71,7 +71,7 @@ form button:hover {
 
 .trash-btn,
 .complete-btn {
-  background: #ff6f47;
+  background: #a12e0e;
   color: white;
   border: none;
   padding: 1rem;
@@ -98,6 +98,53 @@ form button:hover {
 }
 
 .fall {
-    transform: translateY(8rem) rotateZ(20deg);
-    opacity: 0;
+  transform: translateY(8rem) rotateZ(0deg);
+  opacity: 0;
 }
+
+/*CUSTOM SELECTOR */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #00b3b9;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  width: 12rem;
+  padding: 1rem;
+}
+
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: #00b3b9;
+  cursor: pointer;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Transition */
+.select:hover::after {
+  background: white;
+  color: #00b3b9;
+}
+
